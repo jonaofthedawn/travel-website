@@ -1,0 +1,385 @@
+/* global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  font-size: 2.6rem;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+.backtotopbtn {
+  text-transform: uppercase;
+  position: fixed;
+  width: 10rem;
+  height: 4rem;
+  background: #355272c7;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 10%;
+  right: 2%;
+  z-index: 3;
+  cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+.backtotopbtn:hover {
+  background: #27394e;
+}
+.main-h2 {
+  animation: moveInLeft 1s ease-out;
+}
+.main-h3 {
+  animation: moveInRight 1s ease-out;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a:focus {
+  background: #295b72;
+  outline-style: solid;
+  outline-color: white;
+}
+.main-btn {
+  padding: 1.5rem 4rem;
+  background: #263a53;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  outline: none;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  position: relative;
+  font-size: 1.7rem;
+  animation: moveInBottom 0.5s ease-out 0.75s;
+  animation-fill-mode: backwards;
+}
+.main-btn:hover {
+  background: #51a0c5;
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(3, 3, 3, 0.2);
+  border: none;
+}
+.main-btn:active {
+  border: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+/* animations */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  80% {
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+  80% {
+    transform: translateX(-1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%);
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
+
+/* nav section with hero */
+.main-head {
+  background-color: #263a53;
+  color: white;
+  position: sticky;
+  top: 0px;
+}
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex: 1 1 40rem;
+  list-style: none;
+}
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Pattaya", sans-serif;
+  font-weight: normal;
+}
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/desierto.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 3rem;
+}
+
+/* destinos de viaje  */
+#destinos {
+  min-height: 100vh;
+  background: linear-gradient(rgba(153, 224, 224, 0.5), transparent),
+    url(./img/los\ flamencos.jpg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+.destinos-head {
+  width: 90%;
+  margin: auto;
+  color: #263a53;
+}
+.destinos-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+}
+.destinos-head h3 {
+  padding: 4rem 0rem;
+}
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 40rem;
+}
+.moving-cloud-1 {
+  z-index: -1;
+  opacity: 1;
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+}
+.moving-cloud-2 {
+  top: 10%;
+  z-index: -2;
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+/* packs */
+.packs-head {
+  background-color: #263a53;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.packs-head h3 {
+  padding: 1rem;
+}
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  text-align: center;
+  flex: 1 1 30rem;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  border-radius: 24px;
+  box-shadow: 0px 10px 10px rgba(255, 255, 255, 0.5),
+    0px 20px 20px rgba(0, 0, 0, 0.5);
+}
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+.card-icon {
+  background: #263a53;
+  border-radius: 20px 20px 0px 0px;
+}
+.card h4 {
+  padding: 1rem;
+}
+.card p {
+  padding: 1rem;
+}
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), transparent),
+    url("./img/contact-mountain.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-wrapper {
+  background: rgba(0, 0, 0, 0.8);
+  width: 60%;
+  color: white;
+  border-radius: 20px;
+}
+.form-head {
+  text-align: center;
+  padding: 4rem;
+}
+.name-form,
+.email-form,
+.phone-form {
+  padding: 3rem;
+  text-align: center;
+}
+
+.form-wrapper label {
+  margin: 0rem 3rem;
+}
+.form-wrapper button {
+  width: 100%;
+  padding: 2rem;
+  margin-top: 8rem;
+  background: #263a53;
+  color: white;
+  border: none;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  outline: none;
+}
+.form-wrapper button:hover {
+  background: #51a0c5;
+}
+.form-wrapper input {
+  padding: 1rem 3rem;
+}
+footer {
+  color: white;
+  background: #263a53;
+}
+.footer-wrapper {
+  display: flex;
+  padding: 2rem;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  min-height: 10vh;
+  flex-wrap: wrap;
+}
+footer h4 {
+  font-family: "Pattaya", sans-serif;
+  flex: 1 1 40rem;
+}
+footer ul {
+  list-style: none;
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button:focus {
+  background: #295b72;
+  outline-style: solid;
+  outline-color: white;
+}
+
+/* media queries */
+
+@media screen and (max-width: 932px) {
+  html {
+    font-size: 50%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  .cloud {
+    height: 40rem;
+    pointer-events: none;
+  }
+  .destinos-head h3 {
+    background: rgba(125, 211, 211, 0.5);
+    color: white;
+  }
+  .form-wrapper {
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+  }
+  footer h5 {
+    padding-bottom: 3rem;
+  }
+}

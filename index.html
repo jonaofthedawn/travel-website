@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Travelly es una agencia de viajes localizada en Chile"
+    />
+    <meta name="robots" content="index,follows" />
+    <link rel="icon" href="./icons/airplane.svg" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Travelly | Agencia de viajes</title>
+  </head>
+  <body>
+    <header class="main-head">
+      <nav>
+        <h1 id="logo">Travelly</h1>
+        <a title="back-top" href="#" class="backtotopbtn">Back to Top</a>
+        <ul>
+          <li><a title="destinos-button" href="#destinos">Destinos</a></li>
+          <li><a title="packs-button" href="#packs">Paquetes</a></li>
+          <li><a title="contact-button" href="#contact">Contactanos</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+    <section class="hero">
+      <h2 class="main-h2">Viaja sin Limites.</h2>
+      <h3 class="main-h3">Comienza tus viajes al mejor precio con Travelly.</h3>
+      <button class="main-btn">Comienza Ahora</button>
+    </section>
+
+    <section id="destinos">
+      <header class="destinos-head">
+        <h2>Los Mejores Paquetes de Viajes.</h2>
+        <h3>
+          Te ayudamos en la busqueda de el perfecto Hotel, <br />
+          Vuelos y Destinos
+        </h3>
+        <img src="./img/cloud.png" class="moving-cloud-1 cloud" alt="clouds-animation" />
+        <img src="./img/cloud.png" class="moving-cloud-2 cloud" alt="clouds-animation" />
+      </header>
+    </section>
+    <section id="packs">
+      <header class="packs-head">
+        <h2>Lorem ipsum dolor</h2>
+        <h3>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. facilis
+          saepe. Corporis, nesciunt quaerat. Mollitia,
+        </h3>
+      </header>
+      <div class="cards">
+        <div class="card">
+          <div class="card-icon">
+            <img src="./icons/route-solid.svg" alt="route-icon" />
+          </div>
+          <h4>Viaja</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure corrupti exercitationem, sed quasi sint suscipit cupiditate aperiam voluptatem molestias officiis, error harum atque voluptatum quidem aliquam rem quaerat necessitatibus fugiat?</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="./icons/bed-solid.svg" alt="bed-icon" />
+          </div>
+          <h4>Hotel</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repellendus dolor quas, optio, eius, officia voluptatem facilis expedita quibusdam deleniti voluptatum aut debitis. Quasi omnis sapiente laboriosam eos modi eaque?</p>
+        </div>
+        <div class="card">
+          <div class="card-icon">
+            <img src="./icons/plane-departure-solid.svg" alt="plane-departure-icon" />
+          </div>
+          <h4>Vuelos</h4>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus sunt accusantium vel, quasi eum consequuntur fugit odit. Inventore non provident dicta debitis aperiam laborum eveniet aut odit aspernatur, maxime sapiente.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="form-wrapper">
+        <header class="form-head">
+          <h2>Contáctanos</h2>
+        </header>
+        <form action="https://formspree.io/f/mvovjnow" method="POST">
+          <div class="name-form">
+            <label for="name">Nombre:</label>
+            <input id="name" type="text" name="name" required />
+          </div>
+          <div class="phone-form">
+            <label for="phone">Teléfono:</label>
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="Ex: 111-222-3333"
+              required/>
+          </div>
+          <div class="email-form">
+            <label for="email">Email:</label>
+            <input id="email" type="email" name="_replyto" required />
+          </div>
+          
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </section>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <h4>Travelly &copy;</h4>
+        <ul>
+          <li>
+            <a title="instagram-social-media" href="https://www.instagram.com/"><img src="./icons/instagram.svg" alt="instagram-social-media" /></a>
+          </li>
+          <li>
+            <a title="twitter-social-media" href="https://twitter.com/"><img src="./icons/twitter.svg" alt="twitter-social-media" /></a>
+          </li>
+          <li>
+            <a title="youtube-social-media" href="https://www.youtube.com/user/chiletravelchannel"><img src="./icons/youtube.svg" alt="youtube-social-media" /></a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
